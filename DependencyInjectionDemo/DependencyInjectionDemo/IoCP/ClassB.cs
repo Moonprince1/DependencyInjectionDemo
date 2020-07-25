@@ -1,4 +1,6 @@
-﻿namespace DependencyInjectionDemo.IoCP
+﻿using DependencyInjectionDemo.Factory;
+
+namespace DependencyInjectionDemo.IoCP
 {
     public class ClassB
     {
