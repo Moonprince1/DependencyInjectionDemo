@@ -7,9 +7,9 @@ namespace DependencyInjectionDemo.DIP
     {
         public void DoSomething()
         {
-            Console.WriteLine("Performing something...");
-            Thread.Sleep(1000);
-            Console.WriteLine("Done!");
+            Console.WriteLine($"ClassD.DoSomething - Performing something...");
+            Thread.Sleep(1000); // Sleeping... :)
+            Console.WriteLine("ClassD.DoSomething - Done!");
         }
     }
 }
