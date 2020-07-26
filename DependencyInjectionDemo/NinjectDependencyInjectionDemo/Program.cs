@@ -13,8 +13,7 @@ namespace NinjectDependencyInjectionDemo
             kernel.Load(Assembly.GetExecutingAssembly());
             IConfirmationMessageSender confirmationMessage = kernel.Get<IConfirmationMessageSender>();
             var messageSender = new MyMessageSender(confirmationMessage);
-            messageSender.SendMessage("Some text", "123456789");
-            Console.ReadKey();
+            messageSender.SendMessage("Some text", "US:123456789");
         }
     }
 }
