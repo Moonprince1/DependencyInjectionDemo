@@ -10,3 +10,7 @@ DependencyInjectionDemo/UnitTest/bin/
 DependencyInjectionDemo/UnitTest/obj/
 
 DependencyInjectionDemo/packages/
+
+DependencyInjectionDemo/NinjectDependencyInjectionDemo/bin/
+
+DependencyInjectionDemo/NinjectDependencyInjectionDemo/obj/
