@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NinjectDependencyInjectionDemo.MessageSender
 {
     public class MyMessageSender
     {
-        IConfirmationMessageSender _messageSender = null;
+        IConfirmationMessageSender messageSender = null;
 
         public MyMessageSender(IConfirmationMessageSender messageSender)
         {
-            _messageSender = messageSender;
+            this.messageSender = messageSender ?? throw new ArgumentNullException(nameof(messageSender));
         }
 
         public void SendMessage(string message, string recipient)
         {
-            _messageSender.Send(message, recipient);
+            this.messageSender.Send(message, recipient);
         }
     }
 }

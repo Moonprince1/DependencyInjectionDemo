@@ -49,7 +49,7 @@
     <Compile Include="BindingModule.cs" />
     <Compile Include="MessageSender\EmailMessageSender.cs" />
     <Compile Include="MessageSender\IConfirmationMessageSender.cs" />
-    <Compile Include="MessageSender\MessageSender.cs" />
+    <Compile Include="MessageSender\MyMessageSender.cs" />
     <Compile Include="MessageSender\SMSMessageSender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
