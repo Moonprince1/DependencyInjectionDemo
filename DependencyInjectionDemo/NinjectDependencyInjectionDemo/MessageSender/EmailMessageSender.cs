@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace NinjectDependencyInjectionDemo.MessageSender
 {
@@ -8,10 +10,20 @@ namespace NinjectDependencyInjectionDemo.MessageSender
         {
             if (string.IsNullOrWhiteSpace(recipient))
             {
-                throw new ArgumentException("Cannot be null or empty string", nameof(recipient));
+                throw new ArgumentException("Cannot be null, empty or whitespaces string", nameof(recipient));
             }
 
-            Console.WriteLine("Email recipient={0} : data={1}", recipient, message);
+            MailAddress email;
+            try
+            {
+                email = new MailAddress(recipient);
+            }
+            catch (FormatException ex)
+            {
+                throw new ArgumentException($"{recipient} is not a valid email address", nameof(recipient), ex);
+            }
+
+            Console.WriteLine("Email recipient={0} : data={1}", email.Address, message);
         }
     }
 }
