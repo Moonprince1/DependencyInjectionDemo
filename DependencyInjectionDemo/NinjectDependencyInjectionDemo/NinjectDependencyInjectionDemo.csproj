@@ -49,11 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BindingModule.cs" />
+    <Compile Include="ApplicationBindingModule.cs" />
     <Compile Include="MessageSender\EmailMessageSender.cs" />
     <Compile Include="MessageSender\IConfirmationMessageSender.cs" />
     <Compile Include="MessageSender\MyMessageSender.cs" />
     <Compile Include="MessageSender\SMSMessageSender.cs" />
+    <Compile Include="ObjectStore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

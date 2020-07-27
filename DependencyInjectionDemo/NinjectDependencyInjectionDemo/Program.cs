@@ -1,18 +1,16 @@
 ﻿using Ninject;
 using NinjectDependencyInjectionDemo.MessageSender;
 using System;
-using System.Reflection;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace NinjectDependencyInjectionDemo
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            IKernel kernel = new StandardKernel();
-            kernel.Load(Assembly.GetExecutingAssembly());
-            IConfirmationMessageSender confirmationMessage = kernel.Get<IConfirmationMessageSender>();
-            var messageSender = new MyMessageSender(confirmationMessage);
+            var messageSender = ObjectStore.Instance.Kernel.Get<MyMessageSender>();
             messageSender.SendMessage("Some text", "US:123456789");
         }
     }
