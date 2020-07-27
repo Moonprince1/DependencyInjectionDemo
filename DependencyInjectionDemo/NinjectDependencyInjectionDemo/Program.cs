@@ -10,8 +10,10 @@ namespace NinjectDependencyInjectionDemo
     {
         public static void Main(string[] args)
         {
-            var messageSender = ObjectStore.Instance.Kernel.Get<MyMessageSender>();
+            var messageSender = ObjectStore.Instance.Get<MyMessageSender>();
             messageSender.SendMessage("Some text", "US:123456789");
+
+            Task.Delay(3000).Wait();
         }
     }
 }
