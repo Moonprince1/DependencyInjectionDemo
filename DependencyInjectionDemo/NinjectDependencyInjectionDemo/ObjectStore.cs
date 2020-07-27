@@ -1,4 +1,6 @@
 ﻿using Ninject;
+using Ninject.Parameters;
+using Ninject.Syntax;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,18 +42,23 @@ namespace NinjectDependencyInjectionDemo
             this.Kernel = kernel;
         }
 
-        public IKernel Kernel { get; private set; }
+        private IKernel Kernel { get; }
+
+        public T Get<T>(params IParameter[] parameters)
+        {
+            return this.Kernel.Get<T>(parameters);
+        }
+
+        public IBindingToSyntax<T> Rebind<T>()
+        {
+            return this.Kernel.Rebind<T>();
+        }
 
         public void Reset()
         {
             lock (lockObjectStore)
             {
-                if (instance != null)
-                {
-                    var kernel = instance.Kernel;
-                    instance = null;
-                    kernel.Dispose();
-                }
+                instance = null;
             }
         }
     }

@@ -33,7 +33,7 @@ namespace IntegrationTests
             var mockedConfirmationMessageSender = new Mock<IConfirmationMessageSender>();
             mockedConfirmationMessageSender.Setup(it => it.Send(It.IsAny<string>(), It.IsAny<string>()));
 
-            ObjectStore.Instance.Kernel.Rebind<IConfirmationMessageSender>().ToConstant(mockedConfirmationMessageSender.Object);
+            ObjectStore.Instance.Rebind<IConfirmationMessageSender>().ToConstant(mockedConfirmationMessageSender.Object);
 
             // Act
             Program.Main(null);
