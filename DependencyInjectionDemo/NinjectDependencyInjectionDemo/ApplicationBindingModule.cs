@@ -1,15 +1,12 @@
 ﻿using Ninject.Modules;
 using NinjectDependencyInjectionDemo.MessageSender;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NinjectDependencyInjectionDemo
 {
-    public class BindingModule : NinjectModule
+    public class ApplicationBindingModule : NinjectModule
     {
+        public override string Name => nameof(ApplicationBindingModule);
+
         public override void Load()
         {
             this.Bind<IConfirmationMessageSender>().To<SMSMessageSender>();

@@ -1,6 +1,5 @@
 ﻿using libphonenumber;
 using System;
-using System.Linq;
 
 namespace NinjectDependencyInjectionDemo.MessageSender
 {

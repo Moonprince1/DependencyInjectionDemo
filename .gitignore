@@ -14,3 +14,7 @@ DependencyInjectionDemo/NinjectDependencyInjectionDemo/obj/
 DependencyInjectionDemo/UnitTests/bin/
 
 DependencyInjectionDemo/UnitTests/obj/
+
+DependencyInjectionDemo/IntegrationTests/bin/
+
+DependencyInjectionDemo/IntegrationTests/obj/
