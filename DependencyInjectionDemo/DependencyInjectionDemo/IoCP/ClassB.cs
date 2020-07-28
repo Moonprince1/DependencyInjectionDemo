@@ -10,6 +10,11 @@ namespace DependencyInjectionDemo.IoCP
         {
             this.classA = new ClassA();
         }
+
+        public void PerformTask()
+        {
+            this.classA.DoSomething();
+        }
     }
 
     #region IoCP_ClassB
@@ -20,6 +25,11 @@ namespace DependencyInjectionDemo.IoCP
         public IoCP_ClassB()
         {
             this.classA = FactoryClass.CreateClassA();
+        }
+
+        public void PerformTask()
+        {
+            this.classA.DoSomething();
         }
     }
     #endregion
