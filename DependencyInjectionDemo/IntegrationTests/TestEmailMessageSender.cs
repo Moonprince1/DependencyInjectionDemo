@@ -1,4 +1,4 @@
-﻿using NinjectDependencyInjectionDemo.MessageSender;
+﻿using NinjectDependencyInjectionDemo.Message;
 
 namespace IntegrationTests
 {

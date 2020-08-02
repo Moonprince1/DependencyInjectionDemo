@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net.Mail;
-using System.Text.RegularExpressions;
 
-namespace NinjectDependencyInjectionDemo.MessageSender
+namespace NinjectDependencyInjectionDemo.Message
 {
     public class EmailMessageSender : IConfirmationMessageSender
     {

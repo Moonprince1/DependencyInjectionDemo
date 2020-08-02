@@ -43,12 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DIP\ClassC.cs" />
-    <Compile Include="DIP\ClassD.cs" />
-    <Compile Include="DIP\IDoSomething.cs" />
-    <Compile Include="IoCP\ClassA.cs" />
-    <Compile Include="IoCP\ClassB.cs" />
-    <Compile Include="Factory\FactoryClass.cs" />
+    <Compile Include="DependencyInversionPrincipal\Example.cs" />
+    <Compile Include="InversionOfControlPrincipal\Example.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

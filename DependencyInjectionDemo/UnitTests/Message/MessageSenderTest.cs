@@ -1,18 +1,18 @@
 ﻿using Moq;
-using NinjectDependencyInjectionDemo.MessageSender;
+using NinjectDependencyInjectionDemo.Message;
 using NUnit.Framework;
 using System;
 
-namespace UnitTests.MessageSender
+namespace UnitTests.Message
 {
     [TestFixture]
-    public class MyMessageSenderTest
+    public class MessageSenderTest
     {
         [Test]
         public void Constructor_Throws_With_Invalid_Parameters()
         {
             // Assign, Act & Assert
-            var ex = Assert.Throws<ArgumentNullException>(() => new MyMessageSender(null));
+            var ex = Assert.Throws<ArgumentNullException>(() => new MessageSender(null));
 
             Assert.That(ex.ParamName, Is.EqualTo("messageSender"));
         }
@@ -24,7 +24,7 @@ namespace UnitTests.MessageSender
             var confirmationMessageSender = new Mock<IConfirmationMessageSender>();
             confirmationMessageSender.Setup(it => it.Send(It.IsAny<string>(), It.IsAny<string>()));
 
-            var myMessageSender = new MyMessageSender(confirmationMessageSender.Object);
+            var myMessageSender = new MessageSender(confirmationMessageSender.Object);
 
             // Act
             myMessageSender.SendMessage("Some Message", "Some Recipient");

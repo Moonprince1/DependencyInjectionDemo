@@ -1,12 +1,8 @@
-﻿using NinjectDependencyInjectionDemo.MessageSender;
+﻿using NinjectDependencyInjectionDemo.Message;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace UnitTests.MessageSender
+namespace UnitTests.Message
 {
     [TestFixture]
     public class EmailMessageSenderTest

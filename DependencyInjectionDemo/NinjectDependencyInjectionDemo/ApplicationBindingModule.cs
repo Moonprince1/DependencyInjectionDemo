@@ -1,5 +1,5 @@
 ﻿using Ninject.Modules;
-using NinjectDependencyInjectionDemo.MessageSender;
+using NinjectDependencyInjectionDemo.Message;
 
 namespace NinjectDependencyInjectionDemo
 {

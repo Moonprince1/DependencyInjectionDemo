@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace NinjectDependencyInjectionDemo.MessageSender
+namespace NinjectDependencyInjectionDemo.Message
 {
-    public class MyMessageSender
+    public class MessageSender
     {
         IConfirmationMessageSender messageSender = null;
 
-        public MyMessageSender(IConfirmationMessageSender messageSender)
+        public MessageSender(IConfirmationMessageSender messageSender)
         {
             this.messageSender = messageSender ?? throw new ArgumentNullException(nameof(messageSender));
         }

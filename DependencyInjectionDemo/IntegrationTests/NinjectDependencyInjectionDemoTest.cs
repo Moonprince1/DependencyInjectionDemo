@@ -1,9 +1,7 @@
 ﻿using Moq;
-using Ninject;
 using NinjectDependencyInjectionDemo;
-using NinjectDependencyInjectionDemo.MessageSender;
+using NinjectDependencyInjectionDemo.Message;
 using NUnit.Framework;
-using System.Reflection;
 
 namespace IntegrationTests
 {
@@ -13,7 +11,7 @@ namespace IntegrationTests
         [TearDown]
         public void Teardown()
         {
-            ObjectStore.Instance.Reset();
+            Program.Kernel = null;
         }
 
         [Test]
@@ -33,7 +31,7 @@ namespace IntegrationTests
             var mockedConfirmationMessageSender = new Mock<IConfirmationMessageSender>();
             mockedConfirmationMessageSender.Setup(it => it.Send(It.IsAny<string>(), It.IsAny<string>()));
 
-            ObjectStore.Instance.Rebind<IConfirmationMessageSender>().ToConstant(mockedConfirmationMessageSender.Object);
+            Program.Kernel.Rebind<IConfirmationMessageSender>().ToConstant(mockedConfirmationMessageSender.Object);
 
             // Act
             Program.Main(null);
