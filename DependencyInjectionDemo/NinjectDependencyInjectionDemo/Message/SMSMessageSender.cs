@@ -1,7 +1,7 @@
 ﻿using libphonenumber;
 using System;
 
-namespace NinjectDependencyInjectionDemo.MessageSender
+namespace NinjectDependencyInjectionDemo.Message
 {
     public class SMSMessageSender : IConfirmationMessageSender
     {

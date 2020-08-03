@@ -60,10 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageSender\EmailMessageSenderTest.cs" />
-    <Compile Include="MessageSender\SMSMessageSenderTest.cs" />
+    <Compile Include="Message\EmailMessageSenderTest.cs" />
+    <Compile Include="Message\SMSMessageSenderTest.cs" />
+    <Compile Include="Mocking\Examples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MessageSender\MyMessageSenderTest.cs" />
+    <Compile Include="Message\MessageSenderTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

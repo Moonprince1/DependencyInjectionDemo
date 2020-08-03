@@ -1,4 +1,4 @@
-﻿namespace NinjectDependencyInjectionDemo.MessageSender
+﻿namespace NinjectDependencyInjectionDemo.Message
 {
     public interface IConfirmationMessageSender
     {
